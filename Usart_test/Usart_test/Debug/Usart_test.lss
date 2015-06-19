@@ -1,0 +1,377 @@
+
+Usart_test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001f8  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000006  00802000  000001f8  0000026c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  00000272  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000028  00000000  00000000  000002a2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   0000085e  00000000  00000000  000002ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000001bf  00000000  00000000  00000b28  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   000001ff  00000000  00000000  00000ce7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000044  00000000  00000000  00000ee8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    000007a7  00000000  00000000  00000f2c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000073  00000000  00000000  000016d3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000030  00000000  00000000  00001746  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 56 00 	jmp	0xac	; 0xac <__ctors_end>
+   4:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+   8:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+   c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  10:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  14:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  18:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  1c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  20:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  24:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  28:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  2c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  30:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  34:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  38:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  3c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  40:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  44:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  48:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  4c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  50:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  54:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  58:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  5c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  60:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  64:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  68:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  6c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  70:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  74:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  78:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  7c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  80:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  84:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  88:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  8c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  90:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  94:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  98:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  9c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  a0:	0c 94 ea 00 	jmp	0x1d4	; 0x1d4 <__vector_40>
+  a4:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  a8:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+
+000000ac <__ctors_end>:
+  ac:	11 24       	eor	r1, r1
+  ae:	1f be       	out	0x3f, r1	; 63
+  b0:	cf ef       	ldi	r28, 0xFF	; 255
+  b2:	cd bf       	out	0x3d, r28	; 61
+  b4:	df e2       	ldi	r29, 0x2F	; 47
+  b6:	de bf       	out	0x3e, r29	; 62
+
+000000b8 <__do_copy_data>:
+  b8:	10 e2       	ldi	r17, 0x20	; 32
+  ba:	a0 e0       	ldi	r26, 0x00	; 0
+  bc:	b0 e2       	ldi	r27, 0x20	; 32
+  be:	e8 ef       	ldi	r30, 0xF8	; 248
+  c0:	f1 e0       	ldi	r31, 0x01	; 1
+  c2:	02 c0       	rjmp	.+4      	; 0xc8 <__do_copy_data+0x10>
+  c4:	05 90       	lpm	r0, Z+
+  c6:	0d 92       	st	X+, r0
+  c8:	a6 30       	cpi	r26, 0x06	; 6
+  ca:	b1 07       	cpc	r27, r17
+  cc:	d9 f7       	brne	.-10     	; 0xc4 <__do_copy_data+0xc>
+  ce:	0e 94 6d 00 	call	0xda	; 0xda <main>
+  d2:	0c 94 fa 00 	jmp	0x1f4	; 0x1f4 <_exit>
+
+000000d6 <__bad_interrupt>:
+  d6:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000da <main>:
+		usart_write(*text++);
+	}
+}
+static inline void init_oscillator() {
+	// enable 32Mhz internal oscillator
+	OSC.CTRL |= OSC_RC32MEN_bm;
+  da:	e0 e5       	ldi	r30, 0x50	; 80
+  dc:	f0 e0       	ldi	r31, 0x00	; 0
+  de:	80 81       	ld	r24, Z
+  e0:	82 60       	ori	r24, 0x02	; 2
+  e2:	80 83       	st	Z, r24
+	// wait for it to be stable
+	while (!(OSC.STATUS & OSC_RC32MRDY_bm));
+  e4:	81 81       	ldd	r24, Z+1	; 0x01
+  e6:	81 ff       	sbrs	r24, 1
+  e8:	fd cf       	rjmp	.-6      	; 0xe4 <main+0xa>
+	// tell the processor we want to change a protected register
+	CCP=CCP_IOREG_gc;
+  ea:	88 ed       	ldi	r24, 0xD8	; 216
+  ec:	84 bf       	out	0x34, r24	; 52
+	// and start using the 32Mhz oscillator
+	CLK.CTRL=CLK_SCLKSEL_RC32M_gc;
+  ee:	81 e0       	ldi	r24, 0x01	; 1
+  f0:	80 93 40 00 	sts	0x0040, r24
+	// disable the default 2Mhz oscillator
+	OSC.CTRL&=(~OSC_RC2MEN_bm);
+  f4:	e0 e5       	ldi	r30, 0x50	; 80
+  f6:	f0 e0       	ldi	r31, 0x00	; 0
+  f8:	80 81       	ld	r24, Z
+  fa:	8e 7f       	andi	r24, 0xFE	; 254
+  fc:	80 83       	st	Z, r24
+	// enable 32kHz calibrated internal oscillator
+	OSC.CTRL|= OSC_RC32KEN_bm;
+  fe:	80 81       	ld	r24, Z
+ 100:	84 60       	ori	r24, 0x04	; 4
+ 102:	80 83       	st	Z, r24
+	while (!(OSC.STATUS & OSC_RC32KRDY_bm));
+ 104:	81 81       	ldd	r24, Z+1	; 0x01
+ 106:	82 ff       	sbrs	r24, 2
+ 108:	fd cf       	rjmp	.-6      	; 0x104 <main+0x2a>
+	// set bit to 0 to indicate we use the internal 32kHz
+	// callibrated oscillator as auto-calibration source
+	// for our 32Mhz oscillator
+	OSC.DFLLCTRL = OSC_RC32MCREF_RC32K_gc;
+ 10a:	e0 e5       	ldi	r30, 0x50	; 80
+ 10c:	f0 e0       	ldi	r31, 0x00	; 0
+ 10e:	16 82       	std	Z+6, r1	; 0x06
+	// enable auto-calibration for the 32Mhz oscillator
+	DFLLRC32M.CTRL |= DFLL_ENABLE_bm;
+ 110:	e0 e6       	ldi	r30, 0x60	; 96
+ 112:	f0 e0       	ldi	r31, 0x00	; 0
+ 114:	80 81       	ld	r24, Z
+ 116:	81 60       	ori	r24, 0x01	; 1
+ 118:	80 83       	st	Z, r24
+int main( void )
+{
+	init_oscillator();
+
+	// enable clock out on port PC7
+	PORTCFG.CLKOUT = (PORTCFG.CLKOUT & ~PORTCFG_CLKOUTSEL_gm) | PORTCFG_CLKOUT_PC7_gc;
+ 11a:	e0 eb       	ldi	r30, 0xB0	; 176
+ 11c:	f0 e0       	ldi	r31, 0x00	; 0
+ 11e:	84 81       	ldd	r24, Z+4	; 0x04
+ 120:	82 7f       	andi	r24, 0xF2	; 242
+ 122:	81 60       	ori	r24, 0x01	; 1
+ 124:	84 83       	std	Z+4, r24	; 0x04
+	// set PC7 as output
+	PORTC.DIRSET = PIN7_bm;
+ 126:	a0 e4       	ldi	r26, 0x40	; 64
+ 128:	b6 e0       	ldi	r27, 0x06	; 6
+ 12a:	80 e8       	ldi	r24, 0x80	; 128
+ 12c:	11 96       	adiw	r26, 0x01	; 1
+ 12e:	8c 93       	st	X, r24
+ 130:	11 97       	sbiw	r26, 0x01	; 1
+	DFLLRC32M.CTRL |= DFLL_ENABLE_bm;
+}
+
+static inline void init_usart() {
+	// enable clock out on port PC7
+	PORTCFG.CLKOUT = (PORTCFG.CLKOUT & ~PORTCFG_CLKOUTSEL_gm) | PORTCFG_CLKOUT_PC7_gc;
+ 132:	94 81       	ldd	r25, Z+4	; 0x04
+ 134:	92 7f       	andi	r25, 0xF2	; 242
+ 136:	91 60       	ori	r25, 0x01	; 1
+ 138:	94 83       	std	Z+4, r25	; 0x04
+	// set PC7 as output
+	PORTC.DIRSET = PIN7_bm;
+ 13a:	11 96       	adiw	r26, 0x01	; 1
+ 13c:	8c 93       	st	X, r24
+
+	// set PD7 as output for TX0
+	PORTD.DIRSET = PIN7_bm;
+ 13e:	e0 e6       	ldi	r30, 0x60	; 96
+ 140:	f6 e0       	ldi	r31, 0x06	; 6
+ 142:	81 83       	std	Z+1, r24	; 0x01
+	PORTD.OUTSET = PIN7_bm;
+ 144:	85 83       	std	Z+5, r24	; 0x05
+	// remap USARTD0 to PD[7-4]
+	PORTD.REMAP |= PORT_USART0_bm;
+ 146:	86 85       	ldd	r24, Z+14	; 0x0e
+ 148:	80 61       	ori	r24, 0x10	; 16
+ 14a:	86 87       	std	Z+14, r24	; 0x0e
+	// set baud rate 9600: BSEL=12, BSCALE=4
+	// as found in table in
+	// Atmel-42005-8-and-16-bit-AVR-Microcontrollers-XMEGA-E_Manual.pdf
+	USARTD0.BAUDCTRLA = 12; // BSEL
+ 14c:	e0 ec       	ldi	r30, 0xC0	; 192
+ 14e:	f9 e0       	ldi	r31, 0x09	; 9
+ 150:	8c e0       	ldi	r24, 0x0C	; 12
+ 152:	86 83       	std	Z+6, r24	; 0x06
+	USARTD0.BAUDCTRLB = 4 << USART_BSCALE_gp; // BSCALE
+ 154:	80 e4       	ldi	r24, 0x40	; 64
+ 156:	87 83       	std	Z+7, r24	; 0x07
+	// disable 2X
+	USARTD0.CTRLB = USARTD0.CTRLB & ~USART_CLK2X_bm;
+ 158:	83 81       	ldd	r24, Z+3	; 0x03
+ 15a:	8b 7f       	andi	r24, 0xFB	; 251
+ 15c:	83 83       	std	Z+3, r24	; 0x03
+	// enable RX and TX
+	USARTD0.CTRLB = USARTD0.CTRLB | USART_RXEN_bm | USART_TXEN_bm;
+ 15e:	83 81       	ldd	r24, Z+3	; 0x03
+ 160:	88 61       	ori	r24, 0x18	; 24
+ 162:	83 83       	std	Z+3, r24	; 0x03
+	// enable async UART 8N1
+	USARTD0.CTRLC = USART_CMODE_ASYNCHRONOUS_gc | USART_PMODE_DISABLED_gc | USART_CHSIZE_8BIT_gc;
+ 164:	83 e0       	ldi	r24, 0x03	; 3
+ 166:	84 83       	std	Z+4, r24	; 0x04
+	USARTD0.CTRLC &= ~USART_SBMODE_bm;
+ 168:	84 81       	ldd	r24, Z+4	; 0x04
+ 16a:	87 7f       	andi	r24, 0xF7	; 247
+ 16c:	84 83       	std	Z+4, r24	; 0x04
+	USARTD0.CTRLD = 0; // No LUT
+ 16e:	15 82       	std	Z+5, r1	; 0x05
+
+	// set interrupt level for RX
+	USARTD0.CTRLA = (USARTD0.CTRLA & ~USART_RXCINTLVL_gm) | USART_RXCINTLVL_LO_gc;
+ 170:	82 81       	ldd	r24, Z+2	; 0x02
+ 172:	8f 7c       	andi	r24, 0xCF	; 207
+ 174:	80 61       	ori	r24, 0x10	; 16
+ 176:	82 83       	std	Z+2, r24	; 0x02
+}
+
+static inline void init_interrupts() {
+	// Enable PMIC interrupt level low
+	PMIC.CTRL |= PMIC_LOLVLEX_bm;
+ 178:	e0 ea       	ldi	r30, 0xA0	; 160
+ 17a:	f0 e0       	ldi	r31, 0x00	; 0
+ 17c:	82 81       	ldd	r24, Z+2	; 0x02
+ 17e:	81 60       	ori	r24, 0x01	; 1
+ 180:	82 83       	std	Z+2, r24	; 0x02
+	// enable interrupts
+	sei();
+ 182:	78 94       	sei
+	init_usart();
+
+	init_interrupts();
+
+	// set PA0 as output
+	PORTA.DIRSET = PIN0_bm;
+ 184:	81 e0       	ldi	r24, 0x01	; 1
+ 186:	e0 e0       	ldi	r30, 0x00	; 0
+ 188:	f6 e0       	ldi	r31, 0x06	; 6
+ 18a:	81 83       	std	Z+1, r24	; 0x01
+ 18c:	a1 e0       	ldi	r26, 0x01	; 1
+ 18e:	b0 e2       	ldi	r27, 0x20	; 32
+	// blink LED on PA0 with 1 second on, 1 second off
+	// write echo_char on USART on D7; defaults to 42(*)
+	while (1) {
+		usart_write_string("abc");
+		PORTA.OUTSET = PIN0_bm;
+ 190:	c0 e0       	ldi	r28, 0x00	; 0
+ 192:	d6 e0       	ldi	r29, 0x06	; 6
+ 194:	31 e0       	ldi	r19, 0x01	; 1
+		_delay_ms(500);
+		PORTA.OUTCLR = PIN0_bm;
+	}
+ 196:	cd 01       	movw	r24, r26
+//#include <util/setbaud.h>
+
+
+static void usart_write(uint8_t data)
+{
+	USARTD0.DATA = data;
+ 198:	e0 ec       	ldi	r30, 0xC0	; 192
+ 19a:	f9 e0       	ldi	r31, 0x09	; 9
+ 19c:	0b c0       	rjmp	.+22     	; 0x1b4 <main+0xda>
+}
+
+static void usart_write_string(char *text){
+	while(*text)
+	{
+		usart_write(*text++);
+ 19e:	11 96       	adiw	r26, 0x01	; 1
+//#include <util/setbaud.h>
+
+
+static void usart_write(uint8_t data)
+{
+	USARTD0.DATA = data;
+ 1a0:	20 83       	st	Z, r18
+	if(!(USARTD0.STATUS & USART_DREIF_bm)) {
+ 1a2:	21 81       	ldd	r18, Z+1	; 0x01
+ 1a4:	25 fd       	sbrc	r18, 5
+ 1a6:	03 c0       	rjmp	.+6      	; 0x1ae <main+0xd4>
+		while(!(USARTD0.STATUS & USART_TXCIF_bm)); // wait for TX complete
+ 1a8:	21 81       	ldd	r18, Z+1	; 0x01
+ 1aa:	26 ff       	sbrs	r18, 6
+ 1ac:	fd cf       	rjmp	.-6      	; 0x1a8 <main+0xce>
+	}
+	USARTD0.STATUS |= USART_TXCIF_bm;  // clear TX interrupt flag
+ 1ae:	21 81       	ldd	r18, Z+1	; 0x01
+ 1b0:	20 64       	ori	r18, 0x40	; 64
+ 1b2:	21 83       	std	Z+1, r18	; 0x01
+}
+
+static void usart_write_string(char *text){
+	while(*text)
+ 1b4:	2c 91       	ld	r18, X
+ 1b6:	21 11       	cpse	r18, r1
+ 1b8:	f2 cf       	rjmp	.-28     	; 0x19e <main+0xc4>
+	PORTA.DIRSET = PIN0_bm;
+	// blink LED on PA0 with 1 second on, 1 second off
+	// write echo_char on USART on D7; defaults to 42(*)
+	while (1) {
+		usart_write_string("abc");
+		PORTA.OUTSET = PIN0_bm;
+ 1ba:	3d 83       	std	Y+5, r19	; 0x05
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1bc:	2f ef       	ldi	r18, 0xFF	; 255
+ 1be:	43 ed       	ldi	r20, 0xD3	; 211
+ 1c0:	50 e3       	ldi	r21, 0x30	; 48
+ 1c2:	21 50       	subi	r18, 0x01	; 1
+ 1c4:	40 40       	sbci	r20, 0x00	; 0
+ 1c6:	50 40       	sbci	r21, 0x00	; 0
+ 1c8:	e1 f7       	brne	.-8      	; 0x1c2 <main+0xe8>
+ 1ca:	00 c0       	rjmp	.+0      	; 0x1cc <main+0xf2>
+ 1cc:	00 00       	nop
+		_delay_ms(500);
+		PORTA.OUTCLR = PIN0_bm;
+ 1ce:	3e 83       	std	Y+6, r19	; 0x06
+	}
+ 1d0:	dc 01       	movw	r26, r24
+ 1d2:	f0 cf       	rjmp	.-32     	; 0x1b4 <main+0xda>
+
+000001d4 <__vector_40>:
+}
+
+// USART RX receive interrupt handler
+ISR(USARTD0_RXC_vect) {
+ 1d4:	1f 92       	push	r1
+ 1d6:	0f 92       	push	r0
+ 1d8:	0f b6       	in	r0, 0x3f	; 63
+ 1da:	0f 92       	push	r0
+ 1dc:	11 24       	eor	r1, r1
+ 1de:	8f 93       	push	r24
+	echo_char = USARTD0.DATA;
+ 1e0:	80 91 c0 09 	lds	r24, 0x09C0
+ 1e4:	80 93 00 20 	sts	0x2000, r24
+}
+ 1e8:	8f 91       	pop	r24
+ 1ea:	0f 90       	pop	r0
+ 1ec:	0f be       	out	0x3f, r0	; 63
+ 1ee:	0f 90       	pop	r0
+ 1f0:	1f 90       	pop	r1
+ 1f2:	18 95       	reti
+
+000001f4 <_exit>:
+ 1f4:	f8 94       	cli
+
+000001f6 <__stop_program>:
+ 1f6:	ff cf       	rjmp	.-2      	; 0x1f6 <__stop_program>

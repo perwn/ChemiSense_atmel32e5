@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "USART_EXAMPLE4", "USART_EXAMPLE4\USART_EXAMPLE4.cproj", "{D832266E-34AA-4D3C-94E6-60A9058129A0}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "DAC_EXAMPLE11", "DAC_EXAMPLE11\DAC_EXAMPLE11.cproj", "{B68F61A4-3118-4ABB-A241-D18C044314B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D832266E-34AA-4D3C-94E6-60A9058129A0}.Debug|AVR.ActiveCfg = Debug|AVR
+		{D832266E-34AA-4D3C-94E6-60A9058129A0}.Debug|AVR.Build.0 = Debug|AVR
+		{D832266E-34AA-4D3C-94E6-60A9058129A0}.Release|AVR.ActiveCfg = Release|AVR
+		{D832266E-34AA-4D3C-94E6-60A9058129A0}.Release|AVR.Build.0 = Release|AVR
+		{B68F61A4-3118-4ABB-A241-D18C044314B8}.Debug|AVR.ActiveCfg = Debug|AVR
+		{B68F61A4-3118-4ABB-A241-D18C044314B8}.Debug|AVR.Build.0 = Debug|AVR
+		{B68F61A4-3118-4ABB-A241-D18C044314B8}.Release|AVR.ActiveCfg = Release|AVR
+		{B68F61A4-3118-4ABB-A241-D18C044314B8}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
