@@ -69,10 +69,10 @@ return PORTD.IN;
 }
 
 void initLeds(void){
-	PORTD.DIRSET = PIN5_bm; 
-	PORTD.DIRSET = PIN4_bm;
-	PORTD.OUTCLR = PIN5_bm;
-	PORTD.OUTCLR = PIN4_bm;
+	PORTC.DIRSET = PIN0_bm; 
+	PORTC.DIRSET = PIN1_bm;
+	PORTC.OUTCLR = PIN0_bm;
+	PORTC.OUTCLR = PIN1_bm;
 }
 
 static inline void init_oscillator() {

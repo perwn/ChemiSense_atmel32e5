@@ -15,15 +15,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   5 .debug_abbrev 000001bf  00000000  00000000  00000b28  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   000001ff  00000000  00000000  00000ce7  2**0
+  6 .debug_line   000001f2  00000000  00000000  00000ce7  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_frame  00000044  00000000  00000000  00000ee8  2**2
+  7 .debug_frame  00000044  00000000  00000000  00000edc  2**2
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_str    000007a7  00000000  00000000  00000f2c  2**0
+  8 .debug_str    000007ab  00000000  00000000  00000f20  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_loc    00000073  00000000  00000000  000016d3  2**0
+  9 .debug_loc    00000080  00000000  00000000  000016cb  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 00000030  00000000  00000000  00001746  2**0
+ 10 .debug_ranges 00000030  00000000  00000000  0000174b  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -100,8 +100,8 @@ Disassembly of section .text:
   d6:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 000000da <main>:
-		usart_write(*text++);
 	}
+	PORTA.OUTCLR = PIN0_bm;
 }
 static inline void init_oscillator() {
 	// enable 32Mhz internal oscillator
@@ -262,93 +262,92 @@ static inline void init_interrupts() {
  186:	e0 e0       	ldi	r30, 0x00	; 0
  188:	f6 e0       	ldi	r31, 0x06	; 6
  18a:	81 83       	std	Z+1, r24	; 0x01
- 18c:	a1 e0       	ldi	r26, 0x01	; 1
- 18e:	b0 e2       	ldi	r27, 0x20	; 32
-	// blink LED on PA0 with 1 second on, 1 second off
-	// write echo_char on USART on D7; defaults to 42(*)
-	while (1) {
-		usart_write_string("abc");
-		PORTA.OUTSET = PIN0_bm;
- 190:	c0 e0       	ldi	r28, 0x00	; 0
- 192:	d6 e0       	ldi	r29, 0x06	; 6
- 194:	31 e0       	ldi	r19, 0x01	; 1
-		_delay_ms(500);
-		PORTA.OUTCLR = PIN0_bm;
-	}
- 196:	cd 01       	movw	r24, r26
-//#include <util/setbaud.h>
-
-
-static void usart_write(uint8_t data)
-{
-	USARTD0.DATA = data;
- 198:	e0 ec       	ldi	r30, 0xC0	; 192
- 19a:	f9 e0       	ldi	r31, 0x09	; 9
- 19c:	0b c0       	rjmp	.+22     	; 0x1b4 <main+0xda>
+	USARTD0.STATUS |= USART_TXCIF_bm;  // clear TX interrupt flag
 }
 
 static void usart_write_string(char *text){
+	
+	PORTA.OUTSET = PIN0_bm;
+ 18c:	c0 e0       	ldi	r28, 0x00	; 0
+ 18e:	d6 e0       	ldi	r29, 0x06	; 6
+ 190:	31 e0       	ldi	r19, 0x01	; 1
+ 192:	53 2f       	mov	r21, r19
+ 194:	82 e0       	ldi	r24, 0x02	; 2
+ 196:	90 e2       	ldi	r25, 0x20	; 32
 	while(*text)
-	{
-		usart_write(*text++);
- 19e:	11 96       	adiw	r26, 0x01	; 1
+ 198:	41 e6       	ldi	r20, 0x61	; 97
 //#include <util/setbaud.h>
 
 
 static void usart_write(uint8_t data)
 {
 	USARTD0.DATA = data;
- 1a0:	20 83       	st	Z, r18
+ 19a:	e0 ec       	ldi	r30, 0xC0	; 192
+ 19c:	f9 e0       	ldi	r31, 0x09	; 9
+	USARTD0.STATUS |= USART_TXCIF_bm;  // clear TX interrupt flag
+}
+
+static void usart_write_string(char *text){
+	
+	PORTA.OUTSET = PIN0_bm;
+ 19e:	5d 83       	std	Y+5, r21	; 0x05
+ 1a0:	dc 01       	movw	r26, r24
+	while(*text)
+ 1a2:	24 2f       	mov	r18, r20
+//#include <util/setbaud.h>
+
+
+static void usart_write(uint8_t data)
+{
+	USARTD0.DATA = data;
+ 1a4:	20 83       	st	Z, r18
 	if(!(USARTD0.STATUS & USART_DREIF_bm)) {
- 1a2:	21 81       	ldd	r18, Z+1	; 0x01
- 1a4:	25 fd       	sbrc	r18, 5
- 1a6:	03 c0       	rjmp	.+6      	; 0x1ae <main+0xd4>
+ 1a6:	21 81       	ldd	r18, Z+1	; 0x01
+ 1a8:	25 fd       	sbrc	r18, 5
+ 1aa:	03 c0       	rjmp	.+6      	; 0x1b2 <main+0xd8>
 		while(!(USARTD0.STATUS & USART_TXCIF_bm)); // wait for TX complete
- 1a8:	21 81       	ldd	r18, Z+1	; 0x01
- 1aa:	26 ff       	sbrs	r18, 6
- 1ac:	fd cf       	rjmp	.-6      	; 0x1a8 <main+0xce>
+ 1ac:	21 81       	ldd	r18, Z+1	; 0x01
+ 1ae:	26 ff       	sbrs	r18, 6
+ 1b0:	fd cf       	rjmp	.-6      	; 0x1ac <main+0xd2>
 	}
 	USARTD0.STATUS |= USART_TXCIF_bm;  // clear TX interrupt flag
- 1ae:	21 81       	ldd	r18, Z+1	; 0x01
- 1b0:	20 64       	ori	r18, 0x40	; 64
- 1b2:	21 83       	std	Z+1, r18	; 0x01
+ 1b2:	21 81       	ldd	r18, Z+1	; 0x01
+ 1b4:	20 64       	ori	r18, 0x40	; 64
+ 1b6:	21 83       	std	Z+1, r18	; 0x01
 }
 
 static void usart_write_string(char *text){
+	
+	PORTA.OUTSET = PIN0_bm;
 	while(*text)
- 1b4:	2c 91       	ld	r18, X
- 1b6:	21 11       	cpse	r18, r1
- 1b8:	f2 cf       	rjmp	.-28     	; 0x19e <main+0xc4>
-	PORTA.DIRSET = PIN0_bm;
-	// blink LED on PA0 with 1 second on, 1 second off
-	// write echo_char on USART on D7; defaults to 42(*)
-	while (1) {
-		usart_write_string("abc");
-		PORTA.OUTSET = PIN0_bm;
- 1ba:	3d 83       	std	Y+5, r19	; 0x05
+ 1b8:	2d 91       	ld	r18, X+
+ 1ba:	21 11       	cpse	r18, r1
+ 1bc:	f3 cf       	rjmp	.-26     	; 0x1a4 <main+0xca>
+	{
+		usart_write(*text++);
+	}
+	PORTA.OUTCLR = PIN0_bm;
+ 1be:	3e 83       	std	Y+6, r19	; 0x06
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 1bc:	2f ef       	ldi	r18, 0xFF	; 255
- 1be:	43 ed       	ldi	r20, 0xD3	; 211
- 1c0:	50 e3       	ldi	r21, 0x30	; 48
- 1c2:	21 50       	subi	r18, 0x01	; 1
- 1c4:	40 40       	sbci	r20, 0x00	; 0
- 1c6:	50 40       	sbci	r21, 0x00	; 0
- 1c8:	e1 f7       	brne	.-8      	; 0x1c2 <main+0xe8>
- 1ca:	00 c0       	rjmp	.+0      	; 0x1cc <main+0xf2>
- 1cc:	00 00       	nop
-		_delay_ms(500);
-		PORTA.OUTCLR = PIN0_bm;
- 1ce:	3e 83       	std	Y+6, r19	; 0x06
-	}
- 1d0:	dc 01       	movw	r26, r24
- 1d2:	f0 cf       	rjmp	.-32     	; 0x1b4 <main+0xda>
+ 1c0:	2f ef       	ldi	r18, 0xFF	; 255
+ 1c2:	63 ed       	ldi	r22, 0xD3	; 211
+ 1c4:	70 e3       	ldi	r23, 0x30	; 48
+ 1c6:	21 50       	subi	r18, 0x01	; 1
+ 1c8:	60 40       	sbci	r22, 0x00	; 0
+ 1ca:	70 40       	sbci	r23, 0x00	; 0
+ 1cc:	e1 f7       	brne	.-8      	; 0x1c6 <main+0xec>
+ 1ce:	00 c0       	rjmp	.+0      	; 0x1d0 <main+0xf6>
+ 1d0:	00 00       	nop
+ 1d2:	e5 cf       	rjmp	.-54     	; 0x19e <main+0xc4>
 
 000001d4 <__vector_40>:
+		_delay_ms(500);
+	}
 }
 
 // USART RX receive interrupt handler

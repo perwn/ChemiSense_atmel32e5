@@ -112,7 +112,7 @@ int main( void )
 	// blink LED on PA0 with 1 second on, 1 second off
 	// write echo_char on USART on D7; defaults to 42(*)
 	while (1) {
-		usart_write_string("abc");
+		usart_write_string("abc\n");
 		_delay_ms(500);
 	}
 }

@@ -1,0 +1,426 @@
+
+final_board_first.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000021a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000008  00802000  0000021a  0000028e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  00000296  2**0
+                  CONTENTS, READONLY
+  3 .debug_aranges 00000050  00000000  00000000  000002c6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00000963  00000000  00000000  00000316  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 00000210  00000000  00000000  00000c79  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   0000027d  00000000  00000000  00000e89  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000094  00000000  00000000  00001108  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    000007e8  00000000  00000000  0000119c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000080  00000000  00000000  00001984  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 000000a0  00000000  00000000  00001a04  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 56 00 	jmp	0xac	; 0xac <__ctors_end>
+   4:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+   8:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+   c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  10:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  14:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  18:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  1c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  20:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  24:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  28:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  2c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  30:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  34:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  38:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  3c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  40:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  44:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  48:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  4c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  50:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  54:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  58:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  5c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  60:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  64:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  68:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  6c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  70:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  74:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  78:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  7c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  80:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  84:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  88:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  8c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  90:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  94:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  98:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  9c:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  a0:	0c 94 fb 00 	jmp	0x1f6	; 0x1f6 <__vector_40>
+  a4:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+  a8:	0c 94 6b 00 	jmp	0xd6	; 0xd6 <__bad_interrupt>
+
+000000ac <__ctors_end>:
+  ac:	11 24       	eor	r1, r1
+  ae:	1f be       	out	0x3f, r1	; 63
+  b0:	cf ef       	ldi	r28, 0xFF	; 255
+  b2:	cd bf       	out	0x3d, r28	; 61
+  b4:	df e2       	ldi	r29, 0x2F	; 47
+  b6:	de bf       	out	0x3e, r29	; 62
+
+000000b8 <__do_copy_data>:
+  b8:	10 e2       	ldi	r17, 0x20	; 32
+  ba:	a0 e0       	ldi	r26, 0x00	; 0
+  bc:	b0 e2       	ldi	r27, 0x20	; 32
+  be:	ea e1       	ldi	r30, 0x1A	; 26
+  c0:	f2 e0       	ldi	r31, 0x02	; 2
+  c2:	02 c0       	rjmp	.+4      	; 0xc8 <__do_copy_data+0x10>
+  c4:	05 90       	lpm	r0, Z+
+  c6:	0d 92       	st	X+, r0
+  c8:	a8 30       	cpi	r26, 0x08	; 8
+  ca:	b1 07       	cpc	r27, r17
+  cc:	d9 f7       	brne	.-10     	; 0xc4 <__do_copy_data+0xc>
+  ce:	0e 94 73 00 	call	0xe6	; 0xe6 <main>
+  d2:	0c 94 0b 01 	jmp	0x216	; 0x216 <_exit>
+
+000000d6 <__bad_interrupt>:
+  d6:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000da <init_leds>:
+	// enable auto-calibration for the 32Mhz oscillator
+	DFLLRC32M.CTRL |= DFLL_ENABLE_bm;
+}
+
+void init_leds(){
+	PORTC.DIRSET = PIN7_bm | PIN6_bm;
+  da:	e0 e4       	ldi	r30, 0x40	; 64
+  dc:	f6 e0       	ldi	r31, 0x06	; 6
+  de:	80 ec       	ldi	r24, 0xC0	; 192
+  e0:	81 83       	std	Z+1, r24	; 0x01
+	PORTC.OUTCLR = PIN7_bm | PIN6_bm;	
+  e2:	86 83       	std	Z+6, r24	; 0x06
+  e4:	08 95       	ret
+
+000000e6 <main>:
+#include <avr/interrupt.h>
+#include <util/delay.h>
+
+static inline void init_oscillator() {
+	// enable 32Mhz internal oscillator
+	OSC.CTRL |= OSC_RC32MEN_bm;
+  e6:	e0 e5       	ldi	r30, 0x50	; 80
+  e8:	f0 e0       	ldi	r31, 0x00	; 0
+  ea:	80 81       	ld	r24, Z
+  ec:	82 60       	ori	r24, 0x02	; 2
+  ee:	80 83       	st	Z, r24
+	// wait for it to be stable
+	while (!(OSC.STATUS & OSC_RC32MRDY_bm));
+  f0:	81 81       	ldd	r24, Z+1	; 0x01
+  f2:	81 ff       	sbrs	r24, 1
+  f4:	fd cf       	rjmp	.-6      	; 0xf0 <main+0xa>
+	// tell the processor we want to change a protected register
+	CCP=CCP_IOREG_gc;
+  f6:	88 ed       	ldi	r24, 0xD8	; 216
+  f8:	84 bf       	out	0x34, r24	; 52
+	// and start using the 32Mhz oscillator
+	CLK.CTRL=CLK_SCLKSEL_RC32M_gc;
+  fa:	81 e0       	ldi	r24, 0x01	; 1
+  fc:	80 93 40 00 	sts	0x0040, r24
+	// disable the default 2Mhz oscillator
+	OSC.CTRL&=(~OSC_RC2MEN_bm);
+ 100:	e0 e5       	ldi	r30, 0x50	; 80
+ 102:	f0 e0       	ldi	r31, 0x00	; 0
+ 104:	80 81       	ld	r24, Z
+ 106:	8e 7f       	andi	r24, 0xFE	; 254
+ 108:	80 83       	st	Z, r24
+	// enable 32kHz calibrated internal oscillator
+	OSC.CTRL|= OSC_RC32KEN_bm;
+ 10a:	80 81       	ld	r24, Z
+ 10c:	84 60       	ori	r24, 0x04	; 4
+ 10e:	80 83       	st	Z, r24
+	while (!(OSC.STATUS & OSC_RC32KRDY_bm));
+ 110:	81 81       	ldd	r24, Z+1	; 0x01
+ 112:	82 ff       	sbrs	r24, 2
+ 114:	fd cf       	rjmp	.-6      	; 0x110 <main+0x2a>
+	// set bit to 0 to indicate we use the internal 32kHz
+	// callibrated oscillator as auto-calibration source
+	// for our 32Mhz oscillator
+	OSC.DFLLCTRL = OSC_RC32MCREF_RC32K_gc;
+ 116:	e0 e5       	ldi	r30, 0x50	; 80
+ 118:	f0 e0       	ldi	r31, 0x00	; 0
+ 11a:	16 82       	std	Z+6, r1	; 0x06
+	// enable auto-calibration for the 32Mhz oscillator
+	DFLLRC32M.CTRL |= DFLL_ENABLE_bm;
+ 11c:	e0 e6       	ldi	r30, 0x60	; 96
+ 11e:	f0 e0       	ldi	r31, 0x00	; 0
+ 120:	80 81       	ld	r24, Z
+ 122:	81 60       	ori	r24, 0x01	; 1
+ 124:	80 83       	st	Z, r24
+static volatile uint8_t echo_char = 42;
+
+int main(void)
+{
+	init_oscillator();
+	init_leds();
+ 126:	0e 94 6d 00 	call	0xda	; 0xda <init_leds>
+	}
+	PORTA.OUTCLR = PIN0_bm;
+}
+static inline void init_usart() {
+	// enable clock out on port PC7
+	PORTCFG.CLKOUT = (PORTCFG.CLKOUT & ~PORTCFG_CLKOUTSEL_gm) | PORTCFG_CLKOUT_PC7_gc;
+ 12a:	e0 eb       	ldi	r30, 0xB0	; 176
+ 12c:	f0 e0       	ldi	r31, 0x00	; 0
+ 12e:	84 81       	ldd	r24, Z+4	; 0x04
+ 130:	82 7f       	andi	r24, 0xF2	; 242
+ 132:	81 60       	ori	r24, 0x01	; 1
+ 134:	84 83       	std	Z+4, r24	; 0x04
+	// set PC7 as output
+	PORTC.DIRSET = PIN7_bm;
+ 136:	80 e8       	ldi	r24, 0x80	; 128
+ 138:	e0 e4       	ldi	r30, 0x40	; 64
+ 13a:	f6 e0       	ldi	r31, 0x06	; 6
+ 13c:	81 83       	std	Z+1, r24	; 0x01
+
+	// set PD7 as output for TX0
+	PORTD.DIRSET = PIN7_bm;
+ 13e:	e0 e6       	ldi	r30, 0x60	; 96
+ 140:	f6 e0       	ldi	r31, 0x06	; 6
+ 142:	81 83       	std	Z+1, r24	; 0x01
+	PORTD.OUTSET = PIN7_bm;
+ 144:	85 83       	std	Z+5, r24	; 0x05
+	// remap USARTD0 to PD[7-4]
+	PORTD.REMAP |= PORT_USART0_bm;
+ 146:	86 85       	ldd	r24, Z+14	; 0x0e
+ 148:	80 61       	ori	r24, 0x10	; 16
+ 14a:	86 87       	std	Z+14, r24	; 0x0e
+	// set baud rate 9600: BSEL=12, BSCALE=4
+	// as found in table in
+	// Atmel-42005-8-and-16-bit-AVR-Microcontrollers-XMEGA-E_Manual.pdf
+	USARTD0.BAUDCTRLA = 12; // BSEL
+ 14c:	e0 ec       	ldi	r30, 0xC0	; 192
+ 14e:	f9 e0       	ldi	r31, 0x09	; 9
+ 150:	8c e0       	ldi	r24, 0x0C	; 12
+ 152:	86 83       	std	Z+6, r24	; 0x06
+	USARTD0.BAUDCTRLB = 4 << USART_BSCALE_gp; // BSCALE
+ 154:	80 e4       	ldi	r24, 0x40	; 64
+ 156:	87 83       	std	Z+7, r24	; 0x07
+	// disable 2X
+	USARTD0.CTRLB = USARTD0.CTRLB & ~USART_CLK2X_bm;
+ 158:	83 81       	ldd	r24, Z+3	; 0x03
+ 15a:	8b 7f       	andi	r24, 0xFB	; 251
+ 15c:	83 83       	std	Z+3, r24	; 0x03
+	// enable RX and TX
+	USARTD0.CTRLB = USARTD0.CTRLB | USART_RXEN_bm | USART_TXEN_bm;
+ 15e:	83 81       	ldd	r24, Z+3	; 0x03
+ 160:	88 61       	ori	r24, 0x18	; 24
+ 162:	83 83       	std	Z+3, r24	; 0x03
+	// enable async UART 8N1
+	USARTD0.CTRLC = USART_CMODE_ASYNCHRONOUS_gc | USART_PMODE_DISABLED_gc | USART_CHSIZE_8BIT_gc;
+ 164:	83 e0       	ldi	r24, 0x03	; 3
+ 166:	84 83       	std	Z+4, r24	; 0x04
+	USARTD0.CTRLC &= ~USART_SBMODE_bm;
+ 168:	84 81       	ldd	r24, Z+4	; 0x04
+ 16a:	87 7f       	andi	r24, 0xF7	; 247
+ 16c:	84 83       	std	Z+4, r24	; 0x04
+	USARTD0.CTRLD = 0; // No LUT
+ 16e:	15 82       	std	Z+5, r1	; 0x05
+
+	// set interrupt level for RX
+	USARTD0.CTRLA = (USARTD0.CTRLA & ~USART_RXCINTLVL_gm) | USART_RXCINTLVL_LO_gc;
+ 170:	82 81       	ldd	r24, Z+2	; 0x02
+ 172:	8f 7c       	andi	r24, 0xCF	; 207
+ 174:	80 61       	ori	r24, 0x10	; 16
+ 176:	82 83       	std	Z+2, r24	; 0x02
+
+
+
+static inline void init_interrupts() {
+	// Enable PMIC interrupt level low
+	PMIC.CTRL |= PMIC_LOLVLEX_bm;
+ 178:	e0 ea       	ldi	r30, 0xA0	; 160
+ 17a:	f0 e0       	ldi	r31, 0x00	; 0
+ 17c:	82 81       	ldd	r24, Z+2	; 0x02
+ 17e:	81 60       	ori	r24, 0x01	; 1
+ 180:	82 83       	std	Z+2, r24	; 0x02
+	// enable interrupts
+	sei();
+ 182:	78 94       	sei
+	USARTD0.STATUS |= USART_TXCIF_bm;  // clear TX interrupt flag
+}
+
+static void usart_write_string(char *text){
+	
+	PORTA.OUTSET = PIN0_bm;
+ 184:	80 e0       	ldi	r24, 0x00	; 0
+ 186:	96 e0       	ldi	r25, 0x06	; 6
+ 188:	71 e0       	ldi	r23, 0x01	; 1
+ 18a:	07 2f       	mov	r16, r23
+ 18c:	22 e0       	ldi	r18, 0x02	; 2
+ 18e:	30 e2       	ldi	r19, 0x20	; 32
+	while(*text)
+ 190:	14 e7       	ldi	r17, 0x74	; 116
+	PORTC.OUTCLR = PIN6_bm;
+}
+
+static void usart_write(uint8_t data)
+{
+	USARTD0.DATA = data;
+ 192:	e0 ec       	ldi	r30, 0xC0	; 192
+ 194:	f9 e0       	ldi	r31, 0x09	; 9
+	PORTC.DIRSET = PIN7_bm | PIN6_bm;
+	PORTC.OUTCLR = PIN7_bm | PIN6_bm;	
+}
+
+void led0_on(){
+	PORTC.OUTSET = PIN7_bm;
+ 196:	c0 e4       	ldi	r28, 0x40	; 64
+ 198:	d6 e0       	ldi	r29, 0x06	; 6
+ 19a:	60 e8       	ldi	r22, 0x80	; 128
+}
+void led1_on(){
+	PORTC.OUTSET = PIN6_bm;
+}
+void led1_off(){
+	PORTC.OUTCLR = PIN6_bm;
+ 19c:	50 e4       	ldi	r21, 0x40	; 64
+	USARTD0.STATUS |= USART_TXCIF_bm;  // clear TX interrupt flag
+}
+
+static void usart_write_string(char *text){
+	
+	PORTA.OUTSET = PIN0_bm;
+ 19e:	dc 01       	movw	r26, r24
+ 1a0:	15 96       	adiw	r26, 0x05	; 5
+ 1a2:	0c 93       	st	X, r16
+ 1a4:	d9 01       	movw	r26, r18
+	while(*text)
+ 1a6:	41 2f       	mov	r20, r17
+	PORTC.OUTCLR = PIN6_bm;
+}
+
+static void usart_write(uint8_t data)
+{
+	USARTD0.DATA = data;
+ 1a8:	40 83       	st	Z, r20
+	if(!(USARTD0.STATUS & USART_DREIF_bm)) {
+ 1aa:	41 81       	ldd	r20, Z+1	; 0x01
+ 1ac:	45 fd       	sbrc	r20, 5
+ 1ae:	03 c0       	rjmp	.+6      	; 0x1b6 <main+0xd0>
+		while(!(USARTD0.STATUS & USART_TXCIF_bm)); // wait for TX complete
+ 1b0:	41 81       	ldd	r20, Z+1	; 0x01
+ 1b2:	46 ff       	sbrs	r20, 6
+ 1b4:	fd cf       	rjmp	.-6      	; 0x1b0 <main+0xca>
+	}
+	USARTD0.STATUS |= USART_TXCIF_bm;  // clear TX interrupt flag
+ 1b6:	41 81       	ldd	r20, Z+1	; 0x01
+ 1b8:	40 64       	ori	r20, 0x40	; 64
+ 1ba:	41 83       	std	Z+1, r20	; 0x01
+}
+
+static void usart_write_string(char *text){
+	
+	PORTA.OUTSET = PIN0_bm;
+	while(*text)
+ 1bc:	4d 91       	ld	r20, X+
+ 1be:	41 11       	cpse	r20, r1
+ 1c0:	f3 cf       	rjmp	.-26     	; 0x1a8 <main+0xc2>
+	{
+		usart_write(*text++);
+	}
+	PORTA.OUTCLR = PIN0_bm;
+ 1c2:	dc 01       	movw	r26, r24
+ 1c4:	16 96       	adiw	r26, 0x06	; 6
+ 1c6:	7c 93       	st	X, r23
+	PORTC.DIRSET = PIN7_bm | PIN6_bm;
+	PORTC.OUTCLR = PIN7_bm | PIN6_bm;	
+}
+
+void led0_on(){
+	PORTC.OUTSET = PIN7_bm;
+ 1c8:	6d 83       	std	Y+5, r22	; 0x05
+}
+void led1_on(){
+	PORTC.OUTSET = PIN6_bm;
+}
+void led1_off(){
+	PORTC.OUTCLR = PIN6_bm;
+ 1ca:	5e 83       	std	Y+6, r21	; 0x06
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1cc:	bf ef       	ldi	r27, 0xFF	; 255
+ 1ce:	47 ea       	ldi	r20, 0xA7	; 167
+ 1d0:	a1 e6       	ldi	r26, 0x61	; 97
+ 1d2:	b1 50       	subi	r27, 0x01	; 1
+ 1d4:	40 40       	sbci	r20, 0x00	; 0
+ 1d6:	a0 40       	sbci	r26, 0x00	; 0
+ 1d8:	e1 f7       	brne	.-8      	; 0x1d2 <main+0xec>
+ 1da:	00 c0       	rjmp	.+0      	; 0x1dc <main+0xf6>
+ 1dc:	00 00       	nop
+
+void led0_on(){
+	PORTC.OUTSET = PIN7_bm;
+}
+void led0_off(){
+	PORTC.OUTCLR = PIN7_bm;
+ 1de:	6e 83       	std	Y+6, r22	; 0x06
+}
+void led1_on(){
+	PORTC.OUTSET = PIN6_bm;
+ 1e0:	5d 83       	std	Y+5, r21	; 0x05
+ 1e2:	bf ef       	ldi	r27, 0xFF	; 255
+ 1e4:	47 ea       	ldi	r20, 0xA7	; 167
+ 1e6:	a1 e6       	ldi	r26, 0x61	; 97
+ 1e8:	b1 50       	subi	r27, 0x01	; 1
+ 1ea:	40 40       	sbci	r20, 0x00	; 0
+ 1ec:	a0 40       	sbci	r26, 0x00	; 0
+ 1ee:	e1 f7       	brne	.-8      	; 0x1e8 <main+0x102>
+ 1f0:	00 c0       	rjmp	.+0      	; 0x1f2 <main+0x10c>
+ 1f2:	00 00       	nop
+ 1f4:	d4 cf       	rjmp	.-88     	; 0x19e <main+0xb8>
+
+000001f6 <__vector_40>:
+        //TODO:: Please write your application code 
+    }
+}
+
+// USART RX receive interrupt handler
+ISR(USARTD0_RXC_vect) {
+ 1f6:	1f 92       	push	r1
+ 1f8:	0f 92       	push	r0
+ 1fa:	0f b6       	in	r0, 0x3f	; 63
+ 1fc:	0f 92       	push	r0
+ 1fe:	11 24       	eor	r1, r1
+ 200:	8f 93       	push	r24
+	echo_char = USARTD0.DATA;
+ 202:	80 91 c0 09 	lds	r24, 0x09C0
+ 206:	80 93 00 20 	sts	0x2000, r24
+ 20a:	8f 91       	pop	r24
+ 20c:	0f 90       	pop	r0
+ 20e:	0f be       	out	0x3f, r0	; 63
+ 210:	0f 90       	pop	r0
+ 212:	1f 90       	pop	r1
+ 214:	18 95       	reti
+
+00000216 <_exit>:
+ 216:	f8 94       	cli
+
+00000218 <__stop_program>:
+ 218:	ff cf       	rjmp	.-2      	; 0x218 <__stop_program>

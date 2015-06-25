@@ -15,9 +15,9 @@ void toggle(PORT_t *io, uint8_t pin_bm){
 
 int main(void){
 	init_oscillator();
-	initButton();
+	//initButton();
 	initLeds();
-	ADCBInit();
+	//ADCBInit();
 	// enable clock out on port PC7
 //	PORTCFG.CLKOUT = (PORTCFG.CLKOUT & ~PORTCFG_CLKOUTSEL_gm) | PORTCFG_CLKOUT_PC7_gc;
 	// set PC7 as output
@@ -78,6 +78,10 @@ while(1){
 }
 */
 // USART RX receive interrupt handler
+
+
+
+
 ISR(USARTD0_RXC_vect) {
 	echo_char = USARTD0.DATA;
 }	

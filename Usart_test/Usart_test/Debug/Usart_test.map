@@ -300,10 +300,9 @@ END GROUP
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00802001        0x4 Usart_test.o
+                0x00802001        0x5 Usart_test.o
  *(.gnu.linkonce.d*)
                 0x00802006                . = ALIGN (0x2)
- *fill*         0x00802005        0x1 
                 0x00802006                _edata = .
                 0x00802006                PROVIDE (__data_end, .)
 
@@ -396,22 +395,22 @@ END GROUP
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x1bf Usart_test.o
 
-.debug_line     0x00000000      0x1ff
+.debug_line     0x00000000      0x1f2
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000      0x1ff Usart_test.o
+ .debug_line    0x00000000      0x1f2 Usart_test.o
 
 .debug_frame    0x00000000       0x44
  *(.debug_frame)
  .debug_frame   0x00000000       0x44 Usart_test.o
 
-.debug_str      0x00000000      0x7a7
+.debug_str      0x00000000      0x7ab
  *(.debug_str)
- .debug_str     0x00000000      0x7a7 Usart_test.o
-                                0x7f1 (size before relaxing)
+ .debug_str     0x00000000      0x7ab Usart_test.o
+                                0x7f5 (size before relaxing)
 
-.debug_loc      0x00000000       0x73
+.debug_loc      0x00000000       0x80
  *(.debug_loc)
- .debug_loc     0x00000000       0x73 Usart_test.o
+ .debug_loc     0x00000000       0x80 Usart_test.o
 
 .debug_macinfo
  *(.debug_macinfo)
